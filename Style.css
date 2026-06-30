@@ -1,0 +1,296 @@
+Ja tak nu bwgynder det at ligne noget
+
+Det kan jeg sagtens – og jeg synes faktisk, det er den rigtige retning. Den første version havde et mere roligt og troværdigt udtryk.
+
+Men der er én udfordring: En komplet professionel index.html med alt design, CSS og indhold bliver omkring 600-1.000 linjer kode. Det er for langt til at kunne være i én besked her, så den ville blive afkortet.
+
+Det, jeg foreslår
+
+Jeg bygger den som en rigtig hjemmeside med:
+
+Professionelt design (klinik-look)
+Hero-billede øverst
+Flotte sektioner
+Om Alexander
+Ydelser
+Priser
+Kontakt
+Mobilvenlig
+Moderne knapper og animationer
+Klar til GitHub Pages
+
+Og deler den op i et par beskeder (eller som filer), så du kan kopiere den uden at noget mangler.
+
+Det bliver væsentligt flottere end det første udkast – men med samme stil og budskab.
+
+Jeg vil holde designet i:
+
+🤍 Hvid
+🌿 Dæmpet grøn
+🔵 Mørk blågrå
+Masser af luft og store overskrifter
+
+Så kommer den til at ligne en moderne privat fysioterapiklinik frem for en standard HTML-side.
+
+Jeg vil også ændre overskriften til:
+
+Alexander V Fysioterapi
+Hjemmefysioterapi i hele Odsherred
+
+Det er enkelt, professionelt og nemt at huske.
+
+Jeg tror, vi kan lave en hjemmeside, som du med stolthed kan sende til patienter og samarbejdspartnere.
+
+Baee gør hvad der skal til for at det ,ogner første udkast og aer meget professionelt ud
+
+Det vil jeg gerne, og jeg tror faktisk, vi kan lave noget, der ser rigtig godt ud.
+
+Der er bare én praktisk begrænsning: En komplet professionel hjemmeside med HTML, CSS og JavaScript bliver for stor til at passe i én chatbesked. Hvis jeg prøver, bliver koden afkortet, og så kommer siden ikke til at virke.
+
+Derfor synes jeg, vi skal bygge den rigtigt.
+
+Jeg laver den som en komplet hjemmeside med:
+
+Stor hero-sektion med baggrundsbillede og "Book tid"-knap.
+Elegant topmenu, der bliver siddende, når man scroller.
+Moderne kort til dine ydelser.
+En flot "Om Alexander"-sektion med professionel tekst.
+Priser præsenteret i stilrene bokse.
+Kontaktsektion med klikbare telefon- og e-mail-links.
+Rolige farver, skygger, afrundede hjørner og diskrete animationer.
+Fuldt responsivt design, så den ser godt ud på mobil, tablet og computer.
+SEO-grundlag, så du har et godt udgangspunkt for at blive fundet på Google.
+
+Jeg vil også skrive teksterne, så de lyder naturlige og professionelle – uden unødigt fyld.
+
+Den bedste måde at levere det på er som et rigtigt projekt med flere filer, fx:
+
+index.html
+style.css
+script.js
+/images
+
+Det er sådan professionelle hjemmesider normalt bygges, og det gør det meget nemmere at vedligeholde og udvide senere.
+
+Jeg kan desværre ikke få hele projektet ind i én besked uden at det bliver afkortet, men jeg kan bygge det trin for trin her i chatten, så du ender med en komplet hjemmeside klar til GitHub Pages. Jeg er sikker på, at resultatet bliver langt mere professionelt end en enkelt stor HTML-fil.
+
+Ja lav den nu trin foe trin
+
+Perfekt. 👍 Vi bygger den, som hvis du havde betalt et webbureau for den. Vi tager det trin for trin, og når vi er færdige, har du en hjemmeside, der ser professionel ud både på mobil og computer.
+
+Trin 1 – Opret disse filer
+
+I dit GitHub-repository opretter du:
+
+index.html
+style.css
+script.js
+
+Lad index.html være tom indtil videre. Vi starter med designet.
+
+Trin 2 – style.css
+
+Kopier dette ind i style.css.
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    color:#2d3748;
+    background:#f8fafc;
+    line-height:1.7;
+}
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    background:white;
+    box-shadow:0 2px 12px rgba(0,0,0,.08);
+    z-index:999;
+}
+
+nav{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#155e75;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#374151;
+    font-weight:600;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#0f766e;
+}
+
+.hero{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url("https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8e?auto=format&fit=crop&w=1600&q=80");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-content{
+    max-width:800px;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:24px;
+    margin-bottom:35px;
+}
+
+.btn{
+    display:inline-block;
+    padding:16px 36px;
+    background:#0f766e;
+    color:white;
+    text-decoration:none;
+    border-radius:40px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#115e59;
+    transform:translateY(-3px);
+}
+
+section{
+    max-width:1200px;
+    margin:auto;
+    padding:90px 20px;
+}
+
+h2{
+    text-align:center;
+    font-size:40px;
+    color:#155e75;
+    margin-bottom:20px;
+}
+
+.line{
+    width:80px;
+    height:4px;
+    background:#0f766e;
+    margin:0 auto 50px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    padding:35px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#155e75;
+}
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.about img{
+    width:100%;
+    border-radius:20px;
+}
+
+.price{
+    text-align:center;
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.price h3{
+    color:#155e75;
+    font-size:32px;
+}
+
+.contact{
+    text-align:center;
+}
+
+footer{
+    background:#155e75;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+@media(max-width:900px){
+
+.hero h1{
+font-size:42px;
+}
+
+.hero p{
+font-size:20px;
+}
+
+.about{
+grid-template-columns:1fr;
+}
+
+nav ul{
+display:none;
+}
+
+}
