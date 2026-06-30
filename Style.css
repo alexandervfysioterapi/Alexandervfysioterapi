@@ -1,97 +1,3 @@
-Ja tak nu bwgynder det at ligne noget
-
-Det kan jeg sagtens – og jeg synes faktisk, det er den rigtige retning. Den første version havde et mere roligt og troværdigt udtryk.
-
-Men der er én udfordring: En komplet professionel index.html med alt design, CSS og indhold bliver omkring 600-1.000 linjer kode. Det er for langt til at kunne være i én besked her, så den ville blive afkortet.
-
-Det, jeg foreslår
-
-Jeg bygger den som en rigtig hjemmeside med:
-
-Professionelt design (klinik-look)
-Hero-billede øverst
-Flotte sektioner
-Om Alexander
-Ydelser
-Priser
-Kontakt
-Mobilvenlig
-Moderne knapper og animationer
-Klar til GitHub Pages
-
-Og deler den op i et par beskeder (eller som filer), så du kan kopiere den uden at noget mangler.
-
-Det bliver væsentligt flottere end det første udkast – men med samme stil og budskab.
-
-Jeg vil holde designet i:
-
-🤍 Hvid
-🌿 Dæmpet grøn
-🔵 Mørk blågrå
-Masser af luft og store overskrifter
-
-Så kommer den til at ligne en moderne privat fysioterapiklinik frem for en standard HTML-side.
-
-Jeg vil også ændre overskriften til:
-
-Alexander V Fysioterapi
-Hjemmefysioterapi i hele Odsherred
-
-Det er enkelt, professionelt og nemt at huske.
-
-Jeg tror, vi kan lave en hjemmeside, som du med stolthed kan sende til patienter og samarbejdspartnere.
-
-Baee gør hvad der skal til for at det ,ogner første udkast og aer meget professionelt ud
-
-Det vil jeg gerne, og jeg tror faktisk, vi kan lave noget, der ser rigtig godt ud.
-
-Der er bare én praktisk begrænsning: En komplet professionel hjemmeside med HTML, CSS og JavaScript bliver for stor til at passe i én chatbesked. Hvis jeg prøver, bliver koden afkortet, og så kommer siden ikke til at virke.
-
-Derfor synes jeg, vi skal bygge den rigtigt.
-
-Jeg laver den som en komplet hjemmeside med:
-
-Stor hero-sektion med baggrundsbillede og "Book tid"-knap.
-Elegant topmenu, der bliver siddende, når man scroller.
-Moderne kort til dine ydelser.
-En flot "Om Alexander"-sektion med professionel tekst.
-Priser præsenteret i stilrene bokse.
-Kontaktsektion med klikbare telefon- og e-mail-links.
-Rolige farver, skygger, afrundede hjørner og diskrete animationer.
-Fuldt responsivt design, så den ser godt ud på mobil, tablet og computer.
-SEO-grundlag, så du har et godt udgangspunkt for at blive fundet på Google.
-
-Jeg vil også skrive teksterne, så de lyder naturlige og professionelle – uden unødigt fyld.
-
-Den bedste måde at levere det på er som et rigtigt projekt med flere filer, fx:
-
-index.html
-style.css
-script.js
-/images
-
-Det er sådan professionelle hjemmesider normalt bygges, og det gør det meget nemmere at vedligeholde og udvide senere.
-
-Jeg kan desværre ikke få hele projektet ind i én besked uden at det bliver afkortet, men jeg kan bygge det trin for trin her i chatten, så du ender med en komplet hjemmeside klar til GitHub Pages. Jeg er sikker på, at resultatet bliver langt mere professionelt end en enkelt stor HTML-fil.
-
-Ja lav den nu trin foe trin
-
-Perfekt. 👍 Vi bygger den, som hvis du havde betalt et webbureau for den. Vi tager det trin for trin, og når vi er færdige, har du en hjemmeside, der ser professionel ud både på mobil og computer.
-
-Trin 1 – Opret disse filer
-
-I dit GitHub-repository opretter du:
-
-index.html
-style.css
-script.js
-
-Lad index.html være tom indtil videre. Vi starter med designet.
-
-Trin 2 – style.css
-
-Kopier dette ind i style.css.
-
 *{
     margin:0;
     padding:0;
@@ -293,4 +199,29 @@ nav ul{
 display:none;
 }
 
+}
+/* Smooth reveal base */
+.card, .price, .about, h2 {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+/* Links i tekst */
+a {
+    color: #0f766e;
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Mere premium feel */
+.hero-content h1 {
+    letter-spacing: -1px;
+}
+
+.btn {
+    box-shadow: 0 10px 25px rgba(15, 118, 110, 0.3);
 }
