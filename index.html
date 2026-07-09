@@ -1,28 +1,62 @@
-<!-- index.html -->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="da">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Alexander V Fysioterapi – eksklusiv privat fysioterapi med grundig undersøgelse, personlig behandling og målrettet genoptræning." />
-  <meta name="theme-color" content="#0d1412" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alexander V Fysioterapi | Premium fysioterapi & hjemmebehandling</title>
+  <meta name="description" content="Alexander V Fysioterapi tilbyder eksklusiv privat fysioterapi, hjemmebehandling, genoptræning, manuel behandling og personlig rådgivning. Book din tid online.">
+  <meta name="keywords" content="Alexander V Fysioterapi, fysioterapi, fysioterapeut, hjemmebehandling, privat fysioterapi, genoptræning, manuel behandling, smertebehandling, mobil fysioterapi">
+  <meta name="author" content="Alexander V Fysioterapi">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#111827">
 
-  <title>Alexander V Fysioterapi | Privat fysioterapi</title>
+  <meta property="og:title" content="Alexander V Fysioterapi | Premium fysioterapi">
+  <meta property="og:description" content="Eksklusiv privat fysioterapi og hjemmebehandling med fokus på kvalitet, ro og målbare resultater.">
+  <meta property="og:image" content="alexander.jpeg">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="da_DK">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="canonical" href="https://example.com/">
+  <link rel="icon" href="alexander.jpeg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Alexander V Fysioterapi",
+    "image": "alexander.jpeg",
+    "description": "Premium privat fysioterapi, hjemmebehandling og genoptræning.",
+    "medicalSpecialty": "Physiotherapy",
+    "priceRange": "DKK",
+    "areaServed": "Danmark",
+    "url": "https://example.com/",
+    "telephone": "+45 00 00 00 00",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "DK"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
-  <div class="cursor-glow"></div>
+  <a class="skip-link" href="#main">Spring til indhold</a>
 
   <header class="site-header" id="top">
-    <nav class="nav">
-      <a href="#top" class="brand" aria-label="Alexander V Fysioterapi">
+    <nav class="navbar" aria-label="Primær navigation">
+      <a class="brand" href="#top" aria-label="Alexander V Fysioterapi forside">
         <span class="brand-mark">AV</span>
         <span class="brand-text">
           <strong>Alexander V</strong>
@@ -30,335 +64,466 @@
         </span>
       </a>
 
-      <button class="menu-btn" aria-label="Åbn menu" aria-expanded="false">
+      <button class="nav-toggle" type="button" aria-label="Åbn menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span>
         <span></span>
         <span></span>
       </button>
 
-      <div class="nav-panel">
-        <a href="#ekspertise">Ekspertise</a>
-        <a href="#oplevelse">Oplevelse</a>
-        <a href="#metode">Metode</a>
+      <div class="nav-menu" id="nav-menu">
+        <a href="#behandlinger">Behandlinger</a>
+        <a href="#hjemmebehandling">Hjemmebehandling</a>
         <a href="#priser">Priser</a>
+        <a href="#faq">FAQ</a>
         <a href="#kontakt">Kontakt</a>
-        <a href="#booking" class="nav-button">Book tid</a>
+        <a class="nav-cta" href="#booking">Book tid</a>
       </div>
     </nav>
   </header>
 
-  <main>
-    <section class="hero section-pad">
-      <div class="hero-bg">
-        <span></span>
-        <span></span>
-      </div>
-
-      <div class="hero-grid">
-        <div class="hero-copy reveal">
-          <div class="premium-label">
-            <span></span>
-            Privat fysioterapi · én-til-én behandling
-          </div>
-
-          <h1>
-            Fysioterapi for dig, der vil have en præcis plan — ikke bare en hurtig behandling.
-          </h1>
-
+  <main id="main">
+    <section class="hero section">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <p class="eyebrow">Privat fysioterapi med ro, præcision og nærvær</p>
+          <h1>Eksklusiv fysioterapi, der møder dig dér, hvor du er.</h1>
           <p class="hero-lead">
-            Alexander V Fysioterapi kombinerer grundig klinisk undersøgelse, manuel behandling og målrettet træning i et roligt, eksklusivt og personligt forløb.
+            Alexander V Fysioterapi kombinerer manuel behandling, målrettet genoptræning og personlig rådgivning i et premium forløb skabt omkring din hverdag, dine smerter og dine mål.
           </p>
 
           <div class="hero-actions">
-            <a href="#booking" class="btn btn-primary">
-              Book første konsultation
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M5 12h14M13 5l7 7-7 7" />
-              </svg>
-            </a>
-            <a href="#metode" class="btn btn-ghost">Se metoden</a>
+            <a class="btn btn-primary" href="#booking">Book konsultation</a>
+            <a class="btn btn-secondary" href="#hjemmebehandling">Læs om hjemmebehandling</a>
           </div>
 
-          <div class="trust-row">
-            <div>
-              <strong>45 min.</strong>
-              <span>Grundig konsultation</span>
-            </div>
+          <div class="hero-stats" aria-label="Klinikkens nøglefordele">
             <div>
               <strong>1:1</strong>
-              <span>Personlig behandling</span>
+              <span>Personligt forløb</span>
             </div>
             <div>
-              <strong>Plan</strong>
-              <span>Klar retning efter første besøg</span>
+              <strong>60 min</strong>
+              <span>Grundig første konsultation</span>
+            </div>
+            <div>
+              <strong>Hjemme</strong>
+              <span>Behandling hos dig</span>
             </div>
           </div>
         </div>
 
-        <div class="hero-visual reveal">
-          <div class="image-shell">
-            <img src="alexander.jpeg" alt="Alexander V Fysioterapi" />
+        <div class="hero-card reveal">
+          <div class="image-frame">
+            <img src="alexander.jpeg" alt="Alexander V Fysioterapi" loading="eager">
           </div>
-
-          <div class="floating-card card-top">
+          <div class="floating-card floating-card-top">
+            <span>Premium care</span>
+            <strong>Diskret, professionelt og effektivt</strong>
+          </div>
+          <div class="floating-card floating-card-bottom">
             <span>Speciale</span>
-            <strong>Ryg · nakke · sportsskader</strong>
-          </div>
-
-          <div class="floating-card card-bottom">
-            <div class="pulse"></div>
-            <p>Ledige tider denne uge</p>
+            <strong>Smerter, mobilitet og genoptræning</strong>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="marquee" aria-label="Nøgleområder">
-      <div class="marquee-track">
-        <span>Skadesbehandling</span>
-        <span>Genoptræning</span>
-        <span>Manuel behandling</span>
-        <span>Smerteforståelse</span>
-        <span>Performance</span>
-        <span>Forebyggelse</span>
-        <span>Skadesbehandling</span>
-        <span>Genoptræning</span>
-        <span>Manuel behandling</span>
-        <span>Smerteforståelse</span>
-      </div>
-    </section>
-
-    <section class="section-pad expertise" id="ekspertise">
-      <div class="section-heading reveal">
-        <span class="kicker">Ekspertise</span>
-        <h2>Behandling med klinisk overblik og æstetisk ro.</h2>
-        <p>
-          Forløbet starter med at forstå årsagen bag dine symptomer. Derefter får du en konkret strategi, som passer til din hverdag, dit niveau og dine mål.
-        </p>
-      </div>
-
-      <div class="service-grid">
-        <article class="service-card reveal">
-          <div class="service-number">01</div>
-          <h3>Ryg, nakke og skuldre</h3>
-          <p>Til dig med spændinger, hovedpine, hold i nakken, lændesmerter eller tilbagevendende irritation.</p>
-          <a href="#booking">Book vurdering</a>
-        </article>
-
-        <article class="service-card reveal">
-          <div class="service-number">02</div>
-          <h3>Sportsskader</h3>
-          <p>Akutte skader, overbelastning og tilbagevenden til sport med kontrolleret progression.</p>
-          <a href="#booking">Book vurdering</a>
-        </article>
-
-        <article class="service-card reveal">
-          <div class="service-number">03</div>
-          <h3>Genoptræning</h3>
-          <p>Strukturerede forløb efter operation, skade eller længerevarende smerteproblematik.</p>
-          <a href="#booking">Book vurdering</a>
-        </article>
-
-        <article class="service-card reveal">
-          <div class="service-number">04</div>
-          <h3>Performance</h3>
-          <p>Optimering af styrke, mobilitet, teknik og belastningsstyring, så kroppen fungerer bedre.</p>
-          <a href="#booking">Book vurdering</a>
-        </article>
-      </div>
-    </section>
-
-    <section class="experience" id="oplevelse">
-      <div class="experience-image reveal">
-        <img src="alexander.jpeg" alt="Alexander i klinikken" />
-      </div>
-
-      <div class="experience-content reveal">
-        <span class="kicker">Oplevelsen</span>
-        <h2>Privat klinikfølelse. Mere tid. Mere præcision.</h2>
-        <p>
-          Her er ingen standardløsninger. Du bliver mødt med ro, tydelig kommunikation og en behandling, der bygger på både faglighed og forståelse for din situation.
-        </p>
-
-        <div class="feature-list">
-          <div>
-            <span></span>
-            <p>Diskrete, professionelle rammer</p>
-          </div>
-          <div>
-            <span></span>
-            <p>Grundig undersøgelse før behandling</p>
-          </div>
-          <div>
-            <span></span>
-            <p>Øvelser og råd du rent faktisk kan bruge</p>
-          </div>
-          <div>
-            <span></span>
-            <p>Fokus på langsigtede resultater</p>
-          </div>
+    <section class="trust section-sm" aria-label="Fordele">
+      <div class="container trust-grid">
+        <div class="trust-item reveal">
+          <span class="icon">✦</span>
+          <h2>Grundig analyse</h2>
+          <p>Vi starter med årsagen bag problemet, ikke kun symptomet.</p>
+        </div>
+        <div class="trust-item reveal">
+          <span class="icon">✦</span>
+          <h2>Premium oplevelse</h2>
+          <p>Rolige rammer, høj faglighed og et forløb uden standardløsninger.</p>
+        </div>
+        <div class="trust-item reveal">
+          <span class="icon">✦</span>
+          <h2>Fleksibel behandling</h2>
+          <p>Konsultation i klinik eller hjemme hos dig efter behov.</p>
         </div>
       </div>
     </section>
 
-    <section class="method section-pad" id="metode">
-      <div class="section-heading center reveal">
-        <span class="kicker">Metode</span>
-        <h2>Et forløb med struktur fra første minut.</h2>
-      </div>
-
-      <div class="method-grid">
-        <article class="method-step reveal">
-          <span>01</span>
-          <h3>Analyse</h3>
-          <p>Vi gennemgår symptomer, belastning, bevægelse og historik, så behandlingen rammer præcist.</p>
-        </article>
-
-        <article class="method-step reveal">
-          <span>02</span>
-          <h3>Behandling</h3>
-          <p>Manuelle teknikker, træning og konkrete justeringer kombineres efter dit behov.</p>
-        </article>
-
-        <article class="method-step reveal">
-          <span>03</span>
-          <h3>Strategi</h3>
-          <p>Du får en plan for næste skridt, så du ved præcis, hvad du skal gøre efter konsultationen.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="quote-section">
-      <div class="quote-card reveal">
-        <p>
-          “God fysioterapi handler ikke kun om at fjerne smerter — det handler om at forstå kroppen, skabe tillid og bygge et resultat, der holder.”
-        </p>
-        <span>Alexander V</span>
-      </div>
-    </section>
-
-    <section class="prices section-pad" id="priser">
-      <div class="section-heading reveal">
-        <span class="kicker">Priser</span>
-        <h2>Enkel prisstruktur. Premium oplevelse.</h2>
-      </div>
-
-      <div class="price-grid">
-        <article class="price-card reveal">
-          <span class="price-tag">Første besøg</span>
-          <h3>Førstegangskonsultation</h3>
-          <p>Grundig undersøgelse, behandling og plan.</p>
-          <strong>Fra 750 kr.</strong>
-          <a href="#booking" class="btn btn-dark">Book tid</a>
-        </article>
-
-        <article class="price-card featured reveal">
-          <span class="price-tag">Mest valgt</span>
-          <h3>Opfølgende behandling</h3>
-          <p>Behandling, progression og justering af plan.</p>
-          <strong>Fra 550 kr.</strong>
-          <a href="#booking" class="btn btn-primary">Book tid</a>
-        </article>
-
-        <article class="price-card reveal">
-          <span class="price-tag">Forløb</span>
-          <h3>Genoptræningsforløb</h3>
-          <p>Pakke til dig, der ønsker kontinuitet.</p>
-          <strong>Efter aftale</strong>
-          <a href="#booking" class="btn btn-dark">Kontakt</a>
-        </article>
-      </div>
-    </section>
-
-    <section class="booking-section" id="booking">
-      <div class="booking-card reveal">
-        <div class="booking-copy">
-          <span class="kicker">Book tid</span>
-          <h2>Start med en professionel vurdering.</h2>
+    <section class="about section" id="om">
+      <div class="container split-grid">
+        <div class="section-copy reveal">
+          <p class="eyebrow">Om klinikken</p>
+          <h2>En privat fysioterapioplevelse med mere tid, mere kvalitet og mere nærvær.</h2>
+        </div>
+        <div class="text-panel reveal">
           <p>
-            Udfyld formularen, så vender Alexander V Fysioterapi tilbage med forslag til tid og næste skridt.
+            Alexander V Fysioterapi er skabt til dig, der ønsker et professionelt og personligt behandlingsforløb med høj kvalitet fra første kontakt. Her får du ikke et forhastet standardprogram, men en grundig vurdering, tydelig plan og behandling tilpasset din krop.
+          </p>
+          <p>
+            Målet er at skabe varige forbedringer gennem en kombination af manuel behandling, øvelsesterapi, bevægelsesanalyse og realistisk rådgivning, som passer ind i dit liv.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="services section" id="behandlinger">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="eyebrow">Behandlinger</p>
+          <h2>Specialiseret fysioterapi til smerter, skader og bedre funktion.</h2>
+          <p>
+            Vælg et forløb, der passer til dit behov, eller book en indledende konsultation, hvor vi finder den rette vej sammen.
           </p>
         </div>
 
-        <form class="booking-form">
-          <div class="form-row">
-            <label>
-              Navn
-              <input type="text" name="name" placeholder="Dit navn" required />
-            </label>
+        <div class="cards-grid">
+          <article class="service-card reveal">
+            <span class="card-number">01</span>
+            <h3>Manuel behandling</h3>
+            <p>Bløddelsbehandling, mobilisering og teknikker målrettet spændinger, stivhed og smerter.</p>
+          </article>
+          <article class="service-card reveal">
+            <span class="card-number">02</span>
+            <h3>Genoptræning</h3>
+            <p>Strukturerede øvelsesforløb efter skade, operation eller længerevarende smerteproblematikker.</p>
+          </article>
+          <article class="service-card reveal">
+            <span class="card-number">03</span>
+            <h3>Smertebehandling</h3>
+            <p>Helhedsorienteret tilgang til nakke, ryg, skulder, hofte, knæ og overbelastningsskader.</p>
+          </article>
+          <article class="service-card reveal">
+            <span class="card-number">04</span>
+            <h3>Sportsfysioterapi</h3>
+            <p>Analyse, behandling og tilbagevenden til sport med fokus på performance og skadeforebyggelse.</p>
+          </article>
+          <article class="service-card reveal">
+            <span class="card-number">05</span>
+            <h3>Holdnings- og bevægelsesanalyse</h3>
+            <p>Gennemgang af bevægemønstre, arbejdsstillinger og belastninger i din hverdag.</p>
+          </article>
+          <article class="service-card reveal">
+            <span class="card-number">06</span>
+            <h3>Personlig rådgivning</h3>
+            <p>Konkrete strategier, der hjælper dig med at forstå kroppen og tage kontrol over dit forløb.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-            <label>
-              Telefon
-              <input type="tel" name="phone" placeholder="+45" />
-            </label>
+    <section class="home-treatment section" id="hjemmebehandling">
+      <div class="container home-grid">
+        <div class="home-visual reveal">
+          <div class="luxury-box">
+            <span>Hjemmebehandling</span>
+            <strong>Fysioterapi i dine egne rammer</strong>
+          </div>
+        </div>
+
+        <div class="section-copy reveal">
+          <p class="eyebrow">Premium hjemmebehandling</p>
+          <h2>Professionel fysioterapi hjemme hos dig, når komfort og fleksibilitet er vigtigst.</h2>
+          <p>
+            Hjemmebehandling er til dig, der ønsker fysioterapi uden transport, ventetid eller klinikbesøg. Det kan være ideelt ved akutte smerter, nedsat mobilitet, travl hverdag, genoptræning efter operation eller et ønske om diskret behandling i private omgivelser.
+          </p>
+
+          <div class="feature-list">
+            <div>
+              <span>✓</span>
+              <p>Grundig undersøgelse og behandling i dit hjem.</p>
+            </div>
+            <div>
+              <span>✓</span>
+              <p>Øvelser tilpasset dine møbler, trapper, arbejdsplads og daglige rutiner.</p>
+            </div>
+            <div>
+              <span>✓</span>
+              <p>Diskret, rolig og eksklusiv oplevelse med fuldt fokus på dig.</p>
+            </div>
+            <div>
+              <span>✓</span>
+              <p>Velegnet til ryg, nakke, knæ, hofte, skulder, balance og postoperativ genoptræning.</p>
+            </div>
           </div>
 
-          <label>
-            E-mail
-            <input type="email" name="email" placeholder="din@email.dk" required />
+          <a class="btn btn-primary" href="#booking">Book hjemmebehandling</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="process section">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="eyebrow">Forløbet</p>
+          <h2>Et klart og roligt behandlingsforløb fra første samtale.</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <span>01</span>
+            <h3>Indledende vurdering</h3>
+            <p>Vi gennemgår din historik, symptomer, mål og hverdag for at forstå hele billedet.</p>
+          </div>
+          <div class="timeline-item reveal">
+            <span>02</span>
+            <h3>Undersøgelse og behandling</h3>
+            <p>Du får en grundig fysisk undersøgelse og relevant behandling allerede fra første besøg.</p>
+          </div>
+          <div class="timeline-item reveal">
+            <span>03</span>
+            <h3>Personlig plan</h3>
+            <p>Du får en overskuelig plan med øvelser, anbefalinger og realistiske næste skridt.</p>
+          </div>
+          <div class="timeline-item reveal">
+            <span>04</span>
+            <h3>Opfølgning</h3>
+            <p>Vi justerer løbende, så forløbet passer til din udvikling og dit ambitionsniveau.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing section" id="priser">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="eyebrow">Priser</p>
+          <h2>Transparente priser for privat fysioterapi.</h2>
+          <p>Alle konsultationer er individuelle og tilpasses dit behov.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="price-card reveal">
+            <h3>Første konsultation</h3>
+            <p class="price">795 kr.</p>
+            <p class="duration">60 minutter</p>
+            <ul>
+              <li>Grundig undersøgelse</li>
+              <li>Behandling og test</li>
+              <li>Personlig plan</li>
+              <li>Øvelser til hjemmebrug</li>
+            </ul>
+            <a class="btn btn-secondary" href="#booking">Vælg tid</a>
+          </article>
+
+          <article class="price-card featured reveal">
+            <div class="badge">Mest valgt</div>
+            <h3>Opfølgende behandling</h3>
+            <p class="price">595 kr.</p>
+            <p class="duration">45 minutter</p>
+            <ul>
+              <li>Manuel behandling</li>
+              <li>Progression af øvelser</li>
+              <li>Løbende justering</li>
+              <li>Fokus på varige resultater</li>
+            </ul>
+            <a class="btn btn-primary" href="#booking">Book nu</a>
+          </article>
+
+          <article class="price-card reveal">
+            <h3>Hjemmebehandling</h3>
+            <p class="price">995 kr.</p>
+            <p class="duration">60 minutter</p>
+            <ul>
+              <li>Behandling i dit hjem</li>
+              <li>Transport inkluderet lokalt</li>
+              <li>Diskret premium service</li>
+              <li>Tilpasset dine omgivelser</li>
+            </ul>
+            <a class="btn btn-secondary" href="#booking">Book hjemmebesøg</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="booking section" id="booking">
+      <div class="container booking-grid">
+        <div class="section-copy reveal">
+          <p class="eyebrow">Booking</p>
+          <h2>Book en tid eller send en forespørgsel.</h2>
+          <p>
+            Udfyld formularen, så vender Alexander V Fysioterapi tilbage hurtigst muligt med forslag til tid og det rette behandlingsforløb.
+          </p>
+
+          <div class="booking-note">
+            <strong>Akut behov?</strong>
+            <span>Beskriv dine symptomer kort, så prioriteres henvendelsen bedst muligt.</span>
+          </div>
+        </div>
+
+        <form class="booking-form reveal" id="booking-form" action="mailto:kontakt@example.com" method="post" enctype="text/plain">
+          <div class="form-row">
+            <label for="name">Navn</label>
+            <input type="text" id="name" name="Navn" placeholder="Dit fulde navn" required>
+          </div>
+
+          <div class="form-row two-columns">
+            <div>
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="Email" placeholder="din@email.dk" required>
+            </div>
+            <div>
+              <label for="phone">Telefon</label>
+              <input type="tel" id="phone" name="Telefon" placeholder="+45 00 00 00 00" required>
+            </div>
+          </div>
+
+          <div class="form-row two-columns">
+            <div>
+              <label for="treatment">Behandlingstype</label>
+              <select id="treatment" name="Behandlingstype" required>
+                <option value="">Vælg behandling</option>
+                <option>Første konsultation</option>
+                <option>Opfølgende behandling</option>
+                <option>Hjemmebehandling</option>
+                <option>Genoptræning</option>
+                <option>Smertebehandling</option>
+              </select>
+            </div>
+            <div>
+              <label for="preferred-time">Foretrukken tid</label>
+              <select id="preferred-time" name="Foretrukken tid" required>
+                <option value="">Vælg tidspunkt</option>
+                <option>Morgen</option>
+                <option>Formiddag</option>
+                <option>Eftermiddag</option>
+                <option>Aften</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="message">Besked</label>
+            <textarea id="message" name="Besked" rows="5" placeholder="Beskriv kort dine symptomer, mål eller ønsket behandling." required></textarea>
+          </div>
+
+          <label class="checkbox">
+            <input type="checkbox" required>
+            <span>Jeg accepterer, at Alexander V Fysioterapi må kontakte mig vedrørende min henvendelse.</span>
           </label>
 
-          <label>
-            Hvad ønsker du hjælp til?
-            <textarea name="message" rows="5" placeholder="Fortæl kort om smerter, skade eller mål"></textarea>
-          </label>
-
-          <button type="submit" class="btn btn-primary">
-            Send forespørgsel
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M5 12h14M13 5l7 7-7 7" />
-            </svg>
-          </button>
-
-          <p class="form-status" aria-live="polite"></p>
+          <button class="btn btn-primary form-submit" type="submit">Send bookingforespørgsel</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
         </form>
       </div>
     </section>
 
-    <section class="contact section-pad" id="kontakt">
-      <div class="contact-layout">
-        <div class="contact-info reveal">
-          <span class="kicker">Kontakt</span>
-          <h2>Alexander V Fysioterapi</h2>
-          <p>Privat fysioterapi med fokus på kvalitet, nærvær og resultater.</p>
+    <section class="faq section" id="faq">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="eyebrow">FAQ</p>
+          <h2>Ofte stillede spørgsmål.</h2>
         </div>
 
-        <div class="contact-details reveal">
-          <a href="tel:+4500000000">
+        <div class="faq-list">
+          <details class="faq-item reveal">
+            <summary>Hvad sker der ved første konsultation?</summary>
+            <p>Første konsultation består af samtale, undersøgelse, vurdering og behandling. Du får også en personlig plan med anbefalinger og øvelser.</p>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>Tilbyder du hjemmebehandling?</summary>
+            <p>Ja. Hjemmebehandling er en central del af Alexander V Fysioterapi og er velegnet til dig, der ønsker behandling i private og komfortable rammer.</p>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>Skal jeg have en henvisning?</summary>
+            <p>Nej. Du kan booke privat fysioterapi direkte uden henvisning.</p>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>Hvilke smerter behandler du?</summary>
+            <p>Der behandles blandt andet ryg-, nakke-, skulder-, hofte-, knæ- og overbelastningsproblemer samt genoptræning efter skader og operation.</p>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>Hvor hurtigt kan jeg få en tid?</summary>
+            <p>Det afhænger af kalenderen, men bookingforespørgsler besvares hurtigst muligt, og akutte behov prioriteres, når det kan lade sig gøre.</p>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>Hvad skal jeg have klar til hjemmebehandling?</summary>
+            <p>Du skal blot have lidt gulvplads, behageligt tøj og eventuelle relevante papirer eller information om tidligere undersøgelser.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" id="kontakt">
+      <div class="container contact-grid">
+        <div class="section-copy reveal">
+          <p class="eyebrow">Kontakt</p>
+          <h2>Kontakt Alexander V Fysioterapi.</h2>
+          <p>
+            Har du spørgsmål om behandling, hjemmebesøg, priser eller et specifikt problem, er du velkommen til at tage kontakt.
+          </p>
+        </div>
+
+        <div class="contact-cards">
+          <a class="contact-card reveal" href="tel:+4500000000">
             <span>Telefon</span>
-            +45 00 00 00 00
+            <strong>+45 00 00 00 00</strong>
           </a>
-
-          <a href="mailto:kontakt@alexandervfys.dk">
+          <a class="contact-card reveal" href="mailto:kontakt@example.com">
             <span>E-mail</span>
-            kontakt@alexandervfys.dk
+            <strong>kontakt@example.com</strong>
           </a>
-
-          <div>
-            <span>Adresse</span>
-            Din adresse her
-          </div>
-
-          <div>
+          <div class="contact-card reveal">
             <span>Åbningstider</span>
-            Mandag – fredag efter aftale
+            <strong>Mandag – fredag · 08:00 – 18:00</strong>
+          </div>
+          <div class="contact-card reveal">
+            <span>Behandling</span>
+            <strong>Klinik og hjemmebehandling efter aftale</strong>
           </div>
         </div>
       </div>
     </section>
+
+    <section class="cta section">
+      <div class="container cta-box reveal">
+        <p class="eyebrow">Start dit forløb</p>
+        <h2>Klar til mindre smerte, bedre bevægelse og mere frihed?</h2>
+        <p>Book en konsultation hos Alexander V Fysioterapi og få en personlig plan, der passer til din krop og hverdag.</p>
+        <a class="btn btn-primary" href="#booking">Book din tid</a>
+      </div>
+    </section>
   </main>
 
-  <footer class="footer">
-    <a href="#top" class="brand footer-brand">
-      <span class="brand-mark">AV</span>
-      <span class="brand-text">
-        <strong>Alexander V</strong>
-        <small>Fysioterapi</small>
-      </span>
-    </a>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="#top" aria-label="Alexander V Fysioterapi">
+          <span class="brand-mark">AV</span>
+          <span class="brand-text">
+            <strong>Alexander V</strong>
+            <small>Fysioterapi</small>
+          </span>
+        </a>
+        <p>Premium privat fysioterapi og hjemmebehandling med fokus på nærvær, kvalitet og varige resultater.</p>
+      </div>
 
-    <p>© <span id="year"></span> Alexander V Fysioterapi. Alle rettigheder forbeholdes.</p>
+      <div>
+        <h3>Navigation</h3>
+        <a href="#behandlinger">Behandlinger</a>
+        <a href="#hjemmebehandling">Hjemmebehandling</a>
+        <a href="#priser">Priser</a>
+        <a href="#faq">FAQ</a>
+      </div>
 
-    <a href="#top" class="footer-link">Til toppen</a>
+      <div>
+        <h3>Kontakt</h3>
+        <a href="tel:+4500000000">+45 00 00 00 00</a>
+        <a href="mailto:kontakt@example.com">kontakt@example.com</a>
+        <span>Danmark</span>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© <span id="year"></span> Alexander V Fysioterapi. Alle rettigheder forbeholdes.</p>
+      <a href="#top">Til toppen</a>
+    </div>
   </footer>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
