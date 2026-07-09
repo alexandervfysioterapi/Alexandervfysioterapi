@@ -1,83 +1,159 @@
-// script.js
 const header = document.querySelector(".site-header");
-const menuBtn = document.querySelector(".menu-btn");
-const navPanel = document.querySelector(".nav-panel");
+const navToggle = document.querySelector(".nav-toggle");
+const navMenu = document.querySelector(".nav-menu");
+const navLinks = document.querySelectorAll(".nav-menu a");
 const revealElements = document.querySelectorAll(".reveal");
+const bookingForm = document.querySelector("#booking-form");
+const formStatus = document.querySelector("#form-status");
 const year = document.querySelector("#year");
-const form = document.querySelector(".booking-form");
-const formStatus = document.querySelector(".form-status");
-const cursorGlow = document.querySelector(".cursor-glow");
 
-year.textContent = new Date().getFullYear();
+if (year) {
+  year.textContent = new Date().getFullYear();
+}
 
-const setHeaderState = () => {
-  header.classList.toggle("scrolled", window.scrollY > 32);
-};
+function handleHeaderScroll() {
+  if (window.scrollY > 30) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+}
 
-setHeaderState();
-window.addEventListener("scroll", setHeaderState);
+window.addEventListener("scroll", handleHeaderScroll);
+handleHeaderScroll();
 
-menuBtn.addEventListener("click", () => {
-  const isOpen = navPanel.classList.toggle("open");
+if (navToggle && navMenu) {
+  navToggle.addEventListener("click", () => {
+    const isOpen = navMenu.classList.toggle("active");
 
-  menuBtn.classList.toggle("active", isOpen);
-  menuBtn.setAttribute("aria-expanded", String(isOpen));
-  document.body.classList.toggle("menu-open", isOpen);
-});
+    navToggle.classList.toggle("active", isOpen);
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+    document.body.classList.toggle("nav-open", isOpen);
+  });
+}
 
-navPanel.querySelectorAll("a").forEach((link) => {
+navLinks.forEach((link) => {
   link.addEventListener("click", () => {
-    navPanel.classList.remove("open");
-    menuBtn.classList.remove("active");
-    menuBtn.setAttribute("aria-expanded", "false");
-    document.body.classList.remove("menu-open");
+    navMenu.classList.remove("active");
+    navToggle.classList.remove("active");
+    navToggle.setAttribute("aria-expanded", "false");
+    document.body.classList.remove("nav-open");
   });
 });
 
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-
-      entry.target.classList.add("visible");
-      revealObserver.unobserve(entry.target);
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+        revealObserver.unobserve(entry.target);
+      }
     });
   },
   {
-    threshold: 0.14,
+    threshold: 0.16,
     rootMargin: "0px 0px -40px 0px",
   }
 );
 
-revealElements.forEach((element, index) => {
-  element.style.transitionDelay = `${Math.min(index * 45, 220)}ms`;
+revealElements.forEach((element) => {
   revealObserver.observe(element);
 });
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", (event) => {
+    const targetId = anchor.getAttribute("href");
 
-  const name = form.querySelector("[name='name']").value.trim();
+    if (!targetId || targetId === "#") return;
 
-  formStatus.textContent = name
-    ? `Tak, ${name}. Din forespørgsel er registreret.`
-    : "Tak. Din forespørgsel er registreret.";
+    const targetElement = document.querySelector(targetId);
 
-  form.reset();
+    if (!targetElement) return;
+
+    event.preventDefault();
+
+    targetElement.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  });
 });
 
-window.addEventListener("mousemove", (event) => {
-  if (!cursorGlow) return;
+if (bookingForm && formStatus) {
+  bookingForm.addEventListener("submit", (event) => {
+    const requiredFields = bookingForm.querySelectorAll("[required]");
+    let isValid = true;
 
-  cursorGlow.style.left = `${event.clientX}px`;
-  cursorGlow.style.top = `${event.clientY}px`;
+    requiredFields.forEach((field) => {
+      if (field.type === "checkbox") {
+        if (!field.checked) isValid = false;
+      } else if (!field.value.trim()) {
+        isValid = false;
+      }
+    });
+
+    if (!isValid) {
+      event.preventDefault();
+      formStatus.textContent = "Udfyld venligst alle felter, før du sender formularen.";
+      formStatus.style.color = "#9b7634";
+      return;
+    }
+
+    formStatus.textContent = "Tak. Din mailklient åbnes nu, så du kan sende din forespørgsel.";
+    formStatus.style.color = "#1e293b";
+  });
+}
+
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach((item) => {
+  item.addEventListener("toggle", () => {
+    if (item.open) {
+      faqItems.forEach((otherItem) => {
+        if (otherItem !== item) {
+          otherItem.removeAttribute("open");
+        }
+      });
+    }
+  });
 });
 
-document.addEventListener("keydown", (event) => {
-  if (event.key !== "Escape") return;
+let ticking = false;
 
-  navPanel.classList.remove("open");
-  menuBtn.classList.remove("active");
-  menuBtn.setAttribute("aria-expanded", "false");
-  document.body.classList.remove("menu-open");
+function parallaxHero() {
+  const heroCard = document.querySelector(".hero-card");
+  const hero = document.querySelector(".hero");
+
+  if (!heroCard || !hero) return;
+
+  const heroBounds = hero.getBoundingClientRect();
+
+  if (heroBounds.bottom < 0 || heroBounds.top > window.innerHeight) return;
+
+  const movement = window.scrollY * 0.04;
+  heroCard.style.transform = `translateY(${movement}px)`;
+}
+
+window.addEventListener("scroll", () => {
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      parallaxHero();
+      ticking = false;
+    });
+
+    ticking = true;
+  }
+});
+
+const cards = document.querySelectorAll(".service-card, .price-card, .contact-card");
+
+cards.forEach((card) => {
+  card.addEventListener("pointermove", (event) => {
+    const rect = card.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+
+    card.style.setProperty("--mouse-x", `${x}px`);
+    card.style.setProperty("--mouse-y", `${y}px`);
+  });
 });
