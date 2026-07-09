@@ -1,373 +1,473 @@
 <!DOCTYPE html>
 <html lang="da">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Alexander V Fysioterapi | Hjemmefysioterapi i Odsherred</title>
 
-<meta name="description" content="Hjemmefysioterapi, genoptræning, personlig træning og Parkinson Boxing i hele Odsherred.">
+<meta name="description"
+content="Autoriseret fysioterapeut med hjemmefysioterapi, personlig træning og Parkinson Boxing i hele Odsherred.">
+
+<link rel="stylesheet" href="style.css">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Inter', sans-serif;
-}
-
-body{
-background:#f6f7fb;
-color:#1f2937;
-line-height:1.6;
-}
-
-a{
-text-decoration:none;
-color:inherit;
-}
-
-.container{
-max-width:1100px;
-margin:auto;
-padding:0 20px;
-}
-
-/* TOP BAR */
-header{
-position:fixed;
-top:0;
-width:100%;
-background:rgba(255,255,255,0.9);
-backdrop-filter:blur(10px);
-border-bottom:1px solid #eee;
-z-index:999;
-}
-
-.nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-height:70px;
-}
-
-.logo{
-font-weight:700;
-color:#0f766e;
-font-size:18px;
-}
-
-.menu{
-display:flex;
-gap:25px;
-}
-
-.menu a{
-font-weight:500;
-color:#374151;
-}
-
-.menu a:hover{
-color:#0f766e;
-}
-
-.btn{
-background:#0f766e;
-color:white;
-padding:10px 18px;
-border-radius:30px;
-font-weight:600;
-}
-
-/* HERO */
-.hero{
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-color:white;
-position:relative;
-background:url('https://images.unsplash.com/photo-1580281657527-47f249e8f1d0?auto=format&fit=crop&w=1600&q=80') center/cover;
-}
-
-.hero::before{
-content:'';
-position:absolute;
-inset:0;
-background:rgba(0,0,0,0.55);
-}
-
-.hero-content{
-position:relative;
-max-width:800px;
-padding:20px;
-}
-
-.hero h1{
-font-size:52px;
-margin-bottom:15px;
-}
-
-.hero p{
-font-size:18px;
-opacity:0.9;
-margin-bottom:25px;
-}
-
-.hero-buttons{
-display:flex;
-gap:15px;
-justify-content:center;
-flex-wrap:wrap;
-}
-
-.btn-primary{
-background:#0f766e;
-padding:14px 24px;
-border-radius:40px;
-font-weight:600;
-color:white;
-}
-
-.btn-secondary{
-background:white;
-color:#0f766e;
-padding:14px 24px;
-border-radius:40px;
-font-weight:600;
-}
-
-/* SECTIONS */
-section{
-padding:90px 0;
-}
-
-h2{
-text-align:center;
-font-size:36px;
-margin-bottom:10px;
-color:#0f766e;
-}
-
-.subtitle{
-text-align:center;
-margin-bottom:40px;
-color:#6b7280;
-}
-
-/* CARDS */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.card{
-background:white;
-padding:25px;
-border-radius:16px;
-box-shadow:0 10px 30px rgba(0,0,0,0.06);
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-5px);
-}
-
-.card h3{
-margin-bottom:10px;
-color:#111827;
-}
-
-/* PRISER */
-.price{
-text-align:center;
-padding:30px;
-background:white;
-border-radius:16px;
-box-shadow:0 10px 30px rgba(0,0,0,0.06);
-}
-
-.price h3{
-color:#0f766e;
-}
-
-/* ABOUT */
-.about{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-align-items:center;
-}
-
-.about img{
-width:100%;
-border-radius:16px;
-}
-
-/* CONTACT */
-.contact{
-text-align:center;
-background:white;
-padding:40px;
-border-radius:16px;
-box-shadow:0 10px 30px rgba(0,0,0,0.06);
-}
-
-/* FOOTER */
-footer{
-text-align:center;
-padding:30px;
-color:#6b7280;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-.hero h1{font-size:36px;}
-.menu{display:none;}
-.about{grid-template-columns:1fr;}
-}
-
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
 <header>
-  <div class="container nav">
 
-    <div class="logo">Alexander V Fysioterapi</div>
+<div class="container">
 
-    <nav class="menu">
-      <a href="#ydelser">Ydelser</a>
-      <a href="#tilgang">Tilgang</a>
-      <a href="#priser">Priser</a>
-      <a href="#kontakt">Kontakt</a>
-    </nav>
+<div class="logo">
 
-    <a class="btn" href="tel:+4553693107">Ring nu</a>
+Alexander V Fysioterapi
 
-  </div>
+</div>
+
+<nav>
+
+<a href="#ydelser">Ydelser</a>
+
+<a href="#om">Om</a>
+
+<a href="#priser">Priser</a>
+
+<a href="#kontakt">Kontakt</a>
+
+</nav>
+
+<a href="tel:+4553693107" class="ring">
+
+Ring nu
+
+</a>
+
+</div>
+
 </header>
+
+
 
 <section class="hero">
 
-    <div class="hero-text">
+<div class="container hero-grid">
 
-        <span class="tag">Autoriseret fysioterapeut</span>
+<div class="hero-text">
 
-        <h1>Professionel fysioterapi – hjemme hos dig</h1>
+<span class="badge">
 
-        <p>
-            Individuel fysioterapi, genoptræning og målrettet træning i hele Odsherred.
-        </p>
+Autoriseret fysioterapeut
 
-        <div class="hero-buttons">
-            <a href="tel:+4553693107" class="btn">Book tid</a>
-            <a href="#ydelser" class="btn2">Læs mere</a>
-        </div>
+</span>
 
-    </div>
+<h1>
 
-    <div class="hero-image">
-        <img src="Alexander.jpeg" alt="Alexander V Fysioterapi">
-    </div>
+Professionel fysioterapi
 
-</section>
+hjemme hos dig
 
-<section id="ydelser" class="container">
-
-<h2>Ydelser</h2>
-<p class="subtitle">Behandling tilpasset dig og din hverdag</p>
-
-<div class="grid">
-
-<div class="card">
-<h3>🏠 Hjemmefysioterapi</h3>
-<p>Behandling og genoptræning i dit eget hjem i hele Odsherred.</p>
-</div>
-
-<div class="card">
-<h3>💪 Personlig træning</h3>
-<p>Individuelle forløb med fokus på styrke, funktion og sundhed.</p>
-</div>
-
-<div class="card">
-<h3>🥊 Parkinson Boxing</h3>
-<p>Træning med fokus på balance, koordination og livskvalitet.</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="tilgang" class="container about">
-
-<div>
-<h2>Min tilgang</h2>
-<p class="subtitle">Helhedsorienteret fysioterapi</p>
+</h1>
 
 <p>
-Jeg arbejder ud fra en biopsykosocial tilgang, hvor kroppen, sindet og hverdagen ses som en helhed.
-Målet er ikke kun at reducere smerter, men at skabe varige forbedringer i funktion og livskvalitet.
+
+Individuel fysioterapi, genoptræning og målrettet træning i hele Odsherred.
+
+Jeg kommer hjem til dig, så behandlingen kan foregå i trygge omgivelser.
+
 </p>
+
+<div class="buttons">
+
+<a href="tel:+4553693107" class="primary">
+
+Book tid
+
+</a>
+
+<a href="#ydelser" class="secondary">
+
+Læs mere
+
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<img src="Alexander.jpeg" alt="Alexander V Fysioterapi">
+
+</div>
+
+</div>
+
+</section>
+<section id="ydelser" class="services">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>Ydelser</span>
+
+<h2>Behandling med fokus på dig</h2>
+
+<p>
+Jeg tilbyder fysioterapi, træning og boksebaseret træning med udgangspunkt i dine mål, din hverdag og din situation.
+</p>
+
+</div>
+
+<div class="service-grid">
+
+<div class="service-card">
+
+<div class="service-icon">🏠</div>
+
+<h3>Hjemmefysioterapi</h3>
+
+<p>
+Undersøgelse, behandling og genoptræning i dit eget hjem.
+Jeg kører i hele Odsherred, så du kan få professionel behandling i trygge omgivelser.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">💪</div>
+
+<h3>Personlig træning</h3>
+
+<p>
+Individuelle træningsforløb med fokus på styrke, bevægelighed, balance og funktion – tilpasset dit niveau og dine mål.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">🥊</div>
+
+<h3>Parkinson Boxing</h3>
+
+<p>
+Bokseinspireret træning med fokus på koordination, balance, kondition og livskvalitet.
+Velegnet til personer med Parkinsons sygdom.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<section id="om" class="about">
+
+<div class="container about-grid">
+
+<div class="about-image">
+
+<img src="Alexander.jpeg" alt="Alexander V Fysioterapi">
+
+</div>
+
+<div class="about-text">
+
+<span class="badge">
+Om Alexander
+</span>
+
+<h2>Din fysioterapeut i Odsherred</h2>
+
+<p>
+
+Min interesse for menneskekroppen begyndte længe før min uddannelse.
+Allerede som barn var jeg fascineret af anatomi og brugte mange timer på at tegne muskler og kroppens opbygning.
+
+</p>
+
+<p>
+
+I dag er jeg autoriseret fysioterapeut, uddannet personlig træner og har en baggrund som SOSU-assistent. Derudover har jeg mange års erfaring fra boksning og kickboksning og underviser blandt andet i Parkinson Boxing.
+
+</p>
+
+<p>
+
+Jeg arbejder ud fra en helhedsorienteret og biopsykosocial tilgang, hvor behandlingen tager udgangspunkt i dig, dine mål og din hverdag. Mit fokus er at skabe varige resultater – ikke blot midlertidig lindring.
+
+</p>
+
+<a href="tel:+4553693107" class="primary">
+
+Book en uforpligtende samtale
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+<section id="priser" class="pricing">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>Priser</span>
+
+<h2>Enkle og gennemsigtige priser</h2>
+
+<p>
+Ingen skjulte gebyrer. Vi finder sammen det forløb, der passer bedst til dine behov.
+</p>
+
+</div>
+
+<div class="pricing-grid">
+
+<div class="price-card">
+
+<h3>30 minutter</h3>
+
+<div class="price">
+
+500 kr.
+
+</div>
+
+<p>
+
+Kort behandling, opfølgning eller målrettet træning.
+
+</p>
+
+<a href="tel:+4553693107" class="primary">
+
+Book tid
+
+</a>
+
+</div>
+
+<div class="price-card featured">
+
+<div class="popular">
+
+Mest valgt
+
+</div>
+
+<h3>60 minutter</h3>
+
+<div class="price">
+
+800 kr.
+
+</div>
+
+<p>
+
+Grundig undersøgelse, behandling og plan for det videre forløb.
+
+</p>
+
+<a href="tel:+4553693107" class="primary">
+
+Book tid
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="benefits">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>Hvorfor vælge mig?</span>
+
+<h2>Tryghed, faglighed og personlig behandling</h2>
+
+</div>
+
+<div class="benefit-grid">
+
+<div>
+
+<h4>✓ Autoriseret fysioterapeut</h4>
+
+<p>Behandling baseret på faglig viden og erfaring.</p>
+
 </div>
 
 <div>
-<img src="alexander.jpeg" alt="Alexander V Fysioterapi" class="profile-image">
+
+<h4>✓ Jeg kommer til dig</h4>
+
+<p>Du slipper for transport og får behandling i trygge omgivelser.</p>
+
+</div>
+
+<div>
+
+<h4>✓ Individuelle forløb</h4>
+
+<p>Ingen standardløsninger – behandlingen tilpasses dig.</p>
+
+</div>
+
+<div>
+
+<h4>✓ Hele Odsherred</h4>
+
+<p>Jeg kører i hele området og møder dig, hvor du er.</p>
+
+</div>
+
+</div>
+
 </div>
 
 </section>
+<section id="kontakt" class="contact">
 
-<section id="priser" class="container">
+<div class="container">
 
-<h2>Priser</h2>
-<p class="subtitle">Gennemsigtige og enkle priser</p>
+<div class="section-title">
 
-<div class="grid">
+<span>Kontakt</span>
 
-<div class="price">
-<h3>30 min</h3>
-<p>500 kr.</p>
-</div>
+<h2>Klar til at tage første skridt?</h2>
 
-<div class="price">
-<h3>60 min</h3>
-<p>800 kr.</p>
-</div>
+<p>
+Har du spørgsmål, eller ønsker du at booke en tid? Du er altid velkommen til at kontakte mig.
+</p>
 
 </div>
 
-</section>
+<div class="contact-card">
 
-<section id="kontakt" class="container">
+<div class="contact-item">
 
-<h2>Kontakt</h2>
-<p class="subtitle">Jeg kører i hele Odsherred</p>
+<h3>Telefon</h3>
 
-<div class="contact">
+<p>
+<a href="tel:+4553693107">53 69 31 07</a>
+</p>
 
-<p><strong>Telefon:</strong> 53 69 31 07</p>
-<p><strong>Email:</strong> av.fysioterapi@yahoo.com</p>
+</div>
 
-<br>
+<div class="contact-item">
 
-<a class="btn" href="tel:+4553693107">Ring nu</a>
+<h3>E-mail</h3>
+
+<p>
+<a href="mailto:av.fysioterapi@yahoo.com">
+av.fysioterapi@yahoo.com
+</a>
+</p>
+
+</div>
+
+<div class="contact-item">
+
+<h3>Område</h3>
+
+<p>
+Jeg tilbyder hjemmefysioterapi i hele Odsherred.
+</p>
+
+</div>
+
+</div>
+
+<div class="contact-buttons">
+
+<a href="tel:+4553693107" class="primary">
+
+Ring nu
+
+</a>
+
+<a href="mailto:av.fysioterapi@yahoo.com" class="secondary">
+
+Send e-mail
+
+</a>
+
+</div>
 
 </div>
 
 </section>
 
 <footer>
-© 2026 Alexander V Fysioterapi
+
+<div class="container footer-grid">
+
+<div>
+
+<h3>Alexander V Fysioterapi</h3>
+
+<p>
+
+Professionel fysioterapi – hjemme hos dig.
+
+</p>
+
+</div>
+
+<div>
+
+<h4>Kontakt</h4>
+
+<p>53 69 31 07</p>
+
+<p>av.fysioterapi@yahoo.com</p>
+
+</div>
+
+<div>
+
+<h4>Område</h4>
+
+<p>Hele Odsherred</p>
+
+</div>
+
+</div>
+
+<div class="copyright">
+
+© 2026 Alexander V Fysioterapi · Alle rettigheder forbeholdes.
+
+</div>
+
 </footer>
 
 </body>
+
 </html>
