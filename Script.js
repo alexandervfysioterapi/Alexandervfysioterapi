@@ -1,49 +1,83 @@
 // script.js
 const header = document.querySelector(".site-header");
-const menuToggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
-const reveals = document.querySelectorAll(".reveal");
+const menuBtn = document.querySelector(".menu-btn");
+const navPanel = document.querySelector(".nav-panel");
+const revealElements = document.querySelectorAll(".reveal");
 const year = document.querySelector("#year");
 const form = document.querySelector(".booking-form");
-const formMessage = document.querySelector(".form-message");
+const formStatus = document.querySelector(".form-status");
+const cursorGlow = document.querySelector(".cursor-glow");
 
 year.textContent = new Date().getFullYear();
 
-window.addEventListener("scroll", () => {
-  header.classList.toggle("scrolled", window.scrollY > 40);
+const setHeaderState = () => {
+  header.classList.toggle("scrolled", window.scrollY > 32);
+};
+
+setHeaderState();
+window.addEventListener("scroll", setHeaderState);
+
+menuBtn.addEventListener("click", () => {
+  const isOpen = navPanel.classList.toggle("open");
+
+  menuBtn.classList.toggle("active", isOpen);
+  menuBtn.setAttribute("aria-expanded", String(isOpen));
+  document.body.classList.toggle("menu-open", isOpen);
 });
 
-menuToggle.addEventListener("click", () => {
-  const isOpen = navLinks.classList.toggle("open");
-  menuToggle.setAttribute("aria-expanded", isOpen);
-});
-
-navLinks.querySelectorAll("a").forEach((link) => {
+navPanel.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", () => {
-    navLinks.classList.remove("open");
-    menuToggle.setAttribute("aria-expanded", "false");
+    navPanel.classList.remove("open");
+    menuBtn.classList.remove("active");
+    menuBtn.setAttribute("aria-expanded", "false");
+    document.body.classList.remove("menu-open");
   });
 });
 
-const observer = new IntersectionObserver(
+const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
-      }
+      if (!entry.isIntersecting) return;
+
+      entry.target.classList.add("visible");
+      revealObserver.unobserve(entry.target);
     });
   },
   {
-    threshold: 0.16,
+    threshold: 0.14,
+    rootMargin: "0px 0px -40px 0px",
   }
 );
 
-reveals.forEach((element) => observer.observe(element));
+revealElements.forEach((element, index) => {
+  element.style.transitionDelay = `${Math.min(index * 45, 220)}ms`;
+  revealObserver.observe(element);
+});
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  formMessage.textContent = "Tak for din besked. Du bliver kontaktet hurtigst muligt.";
+  const name = form.querySelector("[name='name']").value.trim();
+
+  formStatus.textContent = name
+    ? `Tak, ${name}. Din forespørgsel er registreret.`
+    : "Tak. Din forespørgsel er registreret.";
+
   form.reset();
+});
+
+window.addEventListener("mousemove", (event) => {
+  if (!cursorGlow) return;
+
+  cursorGlow.style.left = `${event.clientX}px`;
+  cursorGlow.style.top = `${event.clientY}px`;
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key !== "Escape") return;
+
+  navPanel.classList.remove("open");
+  menuBtn.classList.remove("active");
+  menuBtn.setAttribute("aria-expanded", "false");
+  document.body.classList.remove("menu-open");
 });
